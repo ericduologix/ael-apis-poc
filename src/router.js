@@ -5,6 +5,7 @@ import { handleCart } from './routes/cart.js';
 
 // Simple route table: method + path -> handler
 const routes = [
+	{ method: 'GET', path: '/debug', handler: () => Response.json({ ok: true }) },
 	{ method: 'GET', path: '/v1/user', handler: handleUser },
 	{ method: 'GET', path: '/v1/product', handler: handleProduct },
 	{ method: 'GET', path: '/v1/page-info', handler: handlePageInfo },
