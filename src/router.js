@@ -2,6 +2,7 @@ import { handleUser } from './routes/user.js';
 import { handleProduct } from './routes/product.js';
 import { handlePageInfo } from './routes/pageInfo.js';
 import { handleCart } from './routes/cart.js';
+import { handlePayloadAddToCart } from './routes/payloadAddToCart.js';
 
 // Simple route table: method + path -> handler
 const routes = [
@@ -10,6 +11,7 @@ const routes = [
 	{ method: 'GET', path: '/v1/product', handler: handleProduct },
 	{ method: 'GET', path: '/v1/page-info', handler: handlePageInfo },
 	{ method: 'GET', path: '/v1/cart', handler: handleCart },
+	{ method: 'GET', path: '/v1/payload/add-to-cart', handler: handlePayloadAddToCart },
 ];
 
 export async function routeRequest(request, env, ctx) {
